@@ -1,0 +1,177 @@
+{
+  "config": {
+    "step": {
+      "user": {
+        "title": "连接 AI Dream 智能床",
+        "description": "使用 AI Dream App 登录的手机号。",
+        "data": {
+          "phone": "手机号",
+          "method": "登录方式"
+        }
+      },
+      "sms": {
+        "title": "短信验证",
+        "description": "输入发送到 {phone} 的验证码。",
+        "data": {
+          "sms_code": "验证码"
+        }
+      },
+      "password": {
+        "title": "密码登录",
+        "description": "输入 {phone} 对应的 AI Dream 密码。密码会保存在 Home Assistant 中用于自动续期；如果不希望保存密码，请改用短信登录。",
+        "data": {
+          "password": "密码"
+        }
+      },
+      "device": {
+        "title": "选择智能床",
+        "data": {
+          "did": "设备"
+        }
+      },
+      "reauth_confirm": {
+        "title": "重新登录",
+        "description": "AI Dream 登录已过期。向 {phone} 发送新的验证码？"
+      },
+      "reauth_sms": {
+        "title": "重新登录",
+        "description": "输入发送到 {phone} 的验证码。",
+        "data": {
+          "sms_code": "验证码"
+        }
+      }
+    },
+    "error": {
+      "cannot_connect": "无法连接 AI Dream 服务。",
+      "invalid_auth": "手机号、密码或验证码不正确。",
+      "unknown": "发生未知错误。"
+    },
+    "abort": {
+      "already_configured": "该智能床已经配置。",
+      "cannot_connect": "无法连接 AI Dream 服务。",
+      "no_devices": "该账号下没有找到智能床。",
+      "reauth_successful": "重新登录成功。"
+    }
+  },
+  "options": {
+    "step": {
+      "init": {
+        "title": "AI Dream 选项",
+        "data": {
+          "scan_interval": "轮询间隔",
+          "enable_waist": "启用腰部电机"
+        }
+      }
+    }
+  },
+  "selector": {
+    "login_method": {
+      "options": {
+        "sms": "短信验证码",
+        "password": "密码"
+      }
+    }
+  },
+  "entity": {
+    "cover": {
+      "head_angle": {
+        "name": "头部角度"
+      },
+      "leg_angle": {
+        "name": "腿部角度"
+      },
+      "waist_angle": {
+        "name": "腰部角度"
+      }
+    },
+    "sensor": {
+      "head_angle": {
+        "name": "头部角度"
+      },
+      "leg_angle": {
+        "name": "腿部角度"
+      },
+      "waist_angle": {
+        "name": "腰部角度"
+      },
+      "sleep_score": {
+        "name": "睡眠评分"
+      },
+      "sleep_duration": {
+        "name": "睡眠时长"
+      },
+      "deep_sleep": {
+        "name": "深睡时长"
+      },
+      "light_sleep": {
+        "name": "浅睡时长"
+      },
+      "rem_sleep": {
+        "name": "快速眼动时长"
+      },
+      "awake_time": {
+        "name": "清醒时长"
+      },
+      "heart_rate_avg": {
+        "name": "平均心率"
+      },
+      "breath_rate_avg": {
+        "name": "平均呼吸率"
+      },
+      "body_moves": {
+        "name": "体动"
+      },
+      "turn_overs": {
+        "name": "翻身次数"
+      },
+      "snore_count": {
+        "name": "打鼾次数"
+      },
+      "hrv_sdnn": {
+        "name": "HRV SDNN"
+      },
+      "hrv_stress": {
+        "name": "压力指数"
+      },
+      "hrv_fatigue": {
+        "name": "疲劳指数"
+      },
+      "sleep_quality": {
+        "name": "睡眠质量"
+      },
+      "sleep_start": {
+        "name": "入睡时间"
+      },
+      "sleep_end": {
+        "name": "醒来时间"
+      }
+    },
+    "number": {
+      "head_angle": {
+        "name": "头部目标角度"
+      },
+      "leg_angle": {
+        "name": "腿部目标角度"
+      },
+      "waist_angle": {
+        "name": "腰部目标角度"
+      }
+    },
+    "binary_sensor": {
+      "online": {
+        "name": "云端连接"
+      },
+      "on_bed": {
+        "name": "在床"
+      }
+    },
+    "switch": {
+      "night_light": {
+        "name": "床底灯"
+      },
+      "child_lock": {
+        "name": "童锁"
+      }
+    }
+  }
+}

@@ -1,0 +1,177 @@
+{
+  "config": {
+    "step": {
+      "user": {
+        "title": "Connect an AI Dream bed",
+        "description": "Sign in with the phone number used by the AI Dream app.",
+        "data": {
+          "phone": "Phone number",
+          "method": "Login method"
+        }
+      },
+      "sms": {
+        "title": "SMS verification",
+        "description": "Enter the code sent to {phone}.",
+        "data": {
+          "sms_code": "Verification code"
+        }
+      },
+      "password": {
+        "title": "Password",
+        "description": "Enter the AI Dream password for {phone}. The password is stored in Home Assistant to renew the session; use SMS login if you prefer not to store it.",
+        "data": {
+          "password": "Password"
+        }
+      },
+      "device": {
+        "title": "Select a bed",
+        "data": {
+          "did": "Bed"
+        }
+      },
+      "reauth_confirm": {
+        "title": "Re-authenticate",
+        "description": "The AI Dream session expired. Send a new code to {phone}?"
+      },
+      "reauth_sms": {
+        "title": "Re-authenticate",
+        "description": "Enter the code sent to {phone}.",
+        "data": {
+          "sms_code": "Verification code"
+        }
+      }
+    },
+    "error": {
+      "cannot_connect": "Unable to reach the AI Dream service.",
+      "invalid_auth": "The phone number, password or verification code was rejected.",
+      "unknown": "Unexpected error."
+    },
+    "abort": {
+      "already_configured": "This bed is already configured.",
+      "cannot_connect": "Unable to reach the AI Dream service.",
+      "no_devices": "No beds were found on this account.",
+      "reauth_successful": "Re-authentication succeeded."
+    }
+  },
+  "options": {
+    "step": {
+      "init": {
+        "title": "AI Dream options",
+        "data": {
+          "scan_interval": "Polling interval",
+          "enable_waist": "Enable the waist motor"
+        }
+      }
+    }
+  },
+  "selector": {
+    "login_method": {
+      "options": {
+        "sms": "SMS verification code",
+        "password": "Password"
+      }
+    }
+  },
+  "entity": {
+    "cover": {
+      "head_angle": {
+        "name": "Head angle"
+      },
+      "leg_angle": {
+        "name": "Leg angle"
+      },
+      "waist_angle": {
+        "name": "Waist angle"
+      }
+    },
+    "sensor": {
+      "head_angle": {
+        "name": "Head angle"
+      },
+      "leg_angle": {
+        "name": "Leg angle"
+      },
+      "waist_angle": {
+        "name": "Waist angle"
+      },
+      "sleep_score": {
+        "name": "Sleep score"
+      },
+      "sleep_duration": {
+        "name": "Sleep duration"
+      },
+      "deep_sleep": {
+        "name": "Deep sleep"
+      },
+      "light_sleep": {
+        "name": "Light sleep"
+      },
+      "rem_sleep": {
+        "name": "REM sleep"
+      },
+      "awake_time": {
+        "name": "Awake time"
+      },
+      "heart_rate_avg": {
+        "name": "Average heart rate"
+      },
+      "breath_rate_avg": {
+        "name": "Average breathing rate"
+      },
+      "body_moves": {
+        "name": "Body movements"
+      },
+      "turn_overs": {
+        "name": "Turn-overs"
+      },
+      "snore_count": {
+        "name": "Snore events"
+      },
+      "hrv_sdnn": {
+        "name": "HRV SDNN"
+      },
+      "hrv_stress": {
+        "name": "Stress index"
+      },
+      "hrv_fatigue": {
+        "name": "Fatigue index"
+      },
+      "sleep_quality": {
+        "name": "Sleep quality"
+      },
+      "sleep_start": {
+        "name": "Fell asleep"
+      },
+      "sleep_end": {
+        "name": "Woke up"
+      }
+    },
+    "number": {
+      "head_angle": {
+        "name": "Head target angle"
+      },
+      "leg_angle": {
+        "name": "Leg target angle"
+      },
+      "waist_angle": {
+        "name": "Waist target angle"
+      }
+    },
+    "binary_sensor": {
+      "online": {
+        "name": "Cloud connection"
+      },
+      "on_bed": {
+        "name": "On bed"
+      }
+    },
+    "switch": {
+      "night_light": {
+        "name": "Under-bed light"
+      },
+      "child_lock": {
+        "name": "Child lock"
+      }
+    }
+  }
+}

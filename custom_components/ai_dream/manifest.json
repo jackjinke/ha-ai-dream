@@ -1,0 +1,17 @@
+{
+  "domain": "ai_dream",
+  "name": "AI Dream",
+  "codeowners": [
+    "@jackjinke"
+  ],
+  "config_flow": true,
+  "integration_type": "device",
+  "iot_class": "cloud_polling",
+  "loggers": [
+    "custom_components.ai_dream"
+  ],
+  "requirements": [],
+  "version": "0.1.0",
+  "documentation": "https://github.com/jackjinke/ha-ai-dream",
+  "issue_tracker": "https://github.com/jackjinke/ha-ai-dream/issues"
+}
